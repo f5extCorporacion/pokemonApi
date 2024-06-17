@@ -14,9 +14,9 @@ const BorderType = {
   
     bug: "border-solid border-4 border-green-500",
   
-    ghost: "",
+    ghost: "border-solid border-4 border-slate-800",
   
-    steel: "",
+    steel: "border-solid border-4 border-slate-600",
   
     fire: "border-solid border-4 border-red-500 ",
    
@@ -30,15 +30,15 @@ const BorderType = {
   
     ice: "border-solid border-4 border-slate-200",
   
-    dragon: "",
+    dragon: "border-solid border-4 border-orange-500",
   
     dark: "border-solid border-4 border-green-900",
   
     fairy: "border-solid border-4 border-red-300",
   
-    unknown: "",
+    unknown: "border-solid border-4 border-amber-950",
   
-    shadow: "",
+    shadow: " border-solid border-4 border-violet-600",
   
   };
   
