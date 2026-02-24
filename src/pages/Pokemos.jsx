@@ -83,51 +83,137 @@ useEffect(()=>{
 },[currenttype])
 
   return (
-    <>
-     <Barra/>
-    <div className="pokemosGlobal">
+  <>
+  <Barra />
 
-      <section className="headerPokemons">
-       <span><b className=" text-red-600">Bienvenido {name} </b>  Aqui podrias encontrar tu poquemon favorito.</span>
+  <div className="min-h-screen bg-[#e0e5ec] py-10 px-5">
 
-            <form onSubmit={SubmitHadle} className="fromData">
-             
-                    <input type="text" name="busque" placeholder="tu pokemon" />     
-                    <button type="submit">Buscar</button>
-              
+    <div className="max-w-6xl mx-auto">
 
-              <select className="capitalize" onChange={change} >
-                <option value=""> All pokemons</option>
-                {
-                  typess.map((type)=><option value={type.name} key={type.url}> {type.name}</option>)
-                }
-              </select>
-              
-            </form>
-            <br />
+      {/* CONTENEDOR PRINCIPAL NEUMORPH */}
+      <section className="p-10 rounded-3xl bg-[#e0e5ec]
+                          shadow-[8px_8px_16px_#bec3c9,
+                                  -8px_-8px_16px_#ffffff]">
+
+        {/* HEADER */}
+        <div className="flex flex-col gap-6">
+
+          <span className="text-lg text-gray-700">
+            <b className="text-red-500">Bienvenido {name}</b>  
+            <span className="ml-2 text-gray-600">
+              Aquí podrás encontrar tu Pokémon favorito.
+            </span>
+          </span>
+
+          {/* FORM NEUMORPH */}
+          <form 
+            onSubmit={SubmitHadle} 
+            className="flex flex-wrap gap-5 items-center"
+          >
+
+            {/* INPUT */}
+            <input
+              type="text"
+              name="busque"
+              placeholder="Buscar Pokémon..."
+              className="px-6 py-3 rounded-xl bg-[#e0e5ec]
+                         shadow-[inset_6px_6px_10px_#bec3c9,
+                                 inset_-6px_-6px_10px_#ffffff]
+                         focus:outline-none
+                         text-gray-700 w-60"
+            />
+
+            {/* BOTON */}
+            <button
+              type="submit"
+              className="px-6 py-3 rounded-xl bg-[#e0e5ec]
+                         shadow-[6px_6px_10px_#bec3c9,
+                                 -6px_-6px_10px_#ffffff]
+                         active:shadow-[inset_6px_6px_10px_#bec3c9,
+                                        inset_-6px_-6px_10px_#ffffff]
+                         transition-all"
+            >
+              Buscar
+            </button>
+
+            {/* SELECT */}
+            <select
+              onChange={change}
+              className="capitalize px-6 py-3 rounded-xl bg-[#e0e5ec]
+                         shadow-[inset_6px_6px_10px_#bec3c9,
+                                 inset_-6px_-6px_10px_#ffffff]
+                         focus:outline-none text-gray-700"
+            >
+              <option value="">All Pokemons</option>
+              {typess.map((type) => (
+                <option value={type.name} key={type.url}>
+                  {type.name}
+                </option>
+              ))}
+            </select>
+
+          </form>
+
+        </div>
       </section>
 
-   <ul className="flex gap-5  p-5 justify-center items-center">
-    <li>
-      <button  onClick={HandlePrev}> {"<"} </button>
-    </li>
-    {
-      pageinCurrentBlock.map((page)=>(
-         <li key={page}
-         onClick={()=> setCurrentPage(page)}
-         className={`p-4 text-white font-bold  ${currentpage === page? "bg-slate-500" : "bg-slate-200"}`}>
-          <button>  {page}</button>
-         </li>))
-    }
-    
-    <li>
-      <button onClick={HandleNext}> {">"} </button>
-    </li>
-   </ul>
-      <PokemoList pokemosProp={itemInCurrentPage}/>
-      
+      {/* PAGINACION NEUMORPH */}
+      <ul className="flex gap-4 p-8 justify-center items-center flex-wrap">
+
+        {/* PREV */}
+        <li>
+          <button
+            onClick={HandlePrev}
+            className="w-12 h-12 rounded-xl bg-[#e0e5ec]
+                       shadow-[6px_6px_10px_#bec3c9,
+                               -6px_-6px_10px_#ffffff]
+                       active:shadow-[inset_6px_6px_10px_#bec3c9,
+                                      inset_-6px_-6px_10px_#ffffff]"
+          >
+            {"<"}
+          </button>
+        </li>
+
+        {pageinCurrentBlock.map((page) => (
+          <li key={page}>
+            <button
+              onClick={() => setCurrentPage(page)}
+              className={`w-12 h-12 rounded-xl font-bold transition-all
+              ${
+                currentpage === page
+                  ? "bg-[#e0e5ec] shadow-[inset_6px_6px_10px_#bec3c9,inset_-6px_-6px_10px_#ffffff]"
+                  : "bg-[#e0e5ec] shadow-[6px_6px_10px_#bec3c9,-6px_-6px_10px_#ffffff]"
+              }`}
+            >
+              {page}
+            </button>
+          </li>
+        ))}
+
+        {/* NEXT */}
+        <li>
+          <button
+            onClick={HandleNext}
+            className="w-12 h-12 rounded-xl bg-[#e0e5ec]
+                       shadow-[6px_6px_10px_#bec3c9,
+                               -6px_-6px_10px_#ffffff]
+                       active:shadow-[inset_6px_6px_10px_#bec3c9,
+                                      inset_-6px_-6px_10px_#ffffff]"
+          >
+            {">"}
+          </button>
+        </li>
+
+      </ul>
+
+      {/* LISTA */}
+      <div className="mt-6">
+        <PokemoList pokemosProp={itemInCurrentPage} />
+      </div>
+
     </div>
-    </>
+  </div>
+</>
   )
 }
 export default Pokemos;
