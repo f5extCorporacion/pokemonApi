@@ -1,47 +1,24 @@
 const bgByType = {
+  normal: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-red-200/40",
+  fighting: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-orange-500/30",
+  flying: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-sky-300/30",
+  poison: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-violet-500/30",
+  ground: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-yellow-700/30",
+  rock: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-slate-400/30",
+  bug: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-green-500/30",
+  ghost: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-indigo-800/30",
+  steel: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-slate-600/30",
+  fire: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-red-500/30",
+  water: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-blue-500/30",
+  grass: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-green-500/30",
+  electric: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-yellow-400/30",
+  psychic: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-pink-600/30",
+  ice: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-cyan-300/30",
+  dragon: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-orange-600/30",
+  dark: "bg-[#e0e5ec] bg-gradient-to-br from-white/40 to-slate-900/40",
+  fairy: "bg-[#e0e5ec] bg-gradient-to-br from-white/60 to-pink-400/30",
+  unknown: "bg-[#e0e5ec]",
+  shadow: "bg-[#e0e5ec] bg-gradient-to-br from-white/40 to-violet-900/40",
+};
 
-    normal: "bg-gradient-to-t from-red-400 to-red-300 ",
-  
-    fighting: "bg-gradient-to-t from-orange-400 to-orange-900",
-  
-    flying: "bg-gradient-to-t from-red-400 to-red-300 ",
-  
-    poison: "bg-gradient-to-t from-violet-400 to-violet-800 ",
-  
-    ground: "bg-gradient-to-t from-yellow-300 to-yellow-800",
-  
-    rock: "bg-gradient-to-t from-slate-300 to-slate-300",
-  
-    bug: "bg-gradient-to-t from-green-400 to-green-500",
-  
-    ghost: "",
-  
-    steel: "",
-  
-    fire: "bg-gradient-to-t from-red-400 to-red-500 ",
-   
-    water: "bg-gradient-to-t from-blue-300 to-blue-300",
-  
-    grass: "bg-gradient-to-t from-green-400 to-green-500",
-  
-    electric: "bg-gradient-to-t from-yellow-300 to-yellow-300",
-  
-    psychic: "bg-gradient-to-t from-yellow-300 to-yellow-900",
-  
-    ice: "bg-gradient-to-t from-slate-300 to-slate-300",
-  
-    dragon: "",
-  
-    dark: "bg-gradient-to-t from-slate-900 to-slate-900",
-  
-    fairy: "bg-gradient-to-t from-red-400 to-red-300 ",
-  
-    unknown: "",
-  
-    shadow: "",
-  
-  };
-  
-   
-  
-  export { bgByType };
+export { bgByType };
