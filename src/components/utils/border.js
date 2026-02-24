@@ -1,47 +1,24 @@
 const BorderType = {
+  normal: "shadow-[6px_6px_12px_#c8ccd2,-6px_-6px_12px_#ffffff]",
+  fighting: "shadow-[6px_6px_12px_rgba(120,53,15,0.4),-6px_-6px_12px_#ffffff]",
+  flying: "shadow-[6px_6px_12px_rgba(147,197,253,0.4),-6px_-6px_12px_#ffffff]",
+  poison: "shadow-[6px_6px_12px_rgba(126,34,206,0.4),-6px_-6px_12px_#ffffff]",
+  ground: "shadow-[6px_6px_12px_rgba(161,98,7,0.4),-6px_-6px_12px_#ffffff]",
+  rock: "shadow-[6px_6px_12px_rgba(100,116,139,0.4),-6px_-6px_12px_#ffffff]",
+  bug: "shadow-[6px_6px_12px_rgba(34,197,94,0.4),-6px_-6px_12px_#ffffff]",
+  ghost: "shadow-[6px_6px_12px_rgba(51,65,85,0.5),-6px_-6px_12px_#ffffff]",
+  steel: "shadow-[6px_6px_12px_rgba(71,85,105,0.4),-6px_-6px_12px_#ffffff]",
+  fire: "shadow-[6px_6px_12px_rgba(239,68,68,0.5),-6px_-6px_12px_#ffffff]",
+  water: "shadow-[6px_6px_12px_rgba(59,130,246,0.5),-6px_-6px_12px_#ffffff]",
+  grass: "shadow-[6px_6px_12px_rgba(34,197,94,0.5),-6px_-6px_12px_#ffffff]",
+  electric: "shadow-[6px_6px_12px_rgba(234,179,8,0.5),-6px_-6px_12px_#ffffff]",
+  psychic: "shadow-[6px_6px_12px_rgba(190,24,93,0.5),-6px_-6px_12px_#ffffff]",
+  ice: "shadow-[6px_6px_12px_rgba(125,211,252,0.5),-6px_-6px_12px_#ffffff]",
+  dragon: "shadow-[6px_6px_12px_rgba(249,115,22,0.5),-6px_-6px_12px_#ffffff]",
+  dark: "shadow-[6px_6px_12px_rgba(15,23,42,0.6),-6px_-6px_12px_#ffffff]",
+  fairy: "shadow-[6px_6px_12px_rgba(244,114,182,0.5),-6px_-6px_12px_#ffffff]",
+  unknown: "shadow-[6px_6px_12px_rgba(120,113,108,0.5),-6px_-6px_12px_#ffffff]",
+  shadow: "shadow-[6px_6px_12px_rgba(88,28,135,0.6),-6px_-6px_12px_#ffffff]",
+};
 
-    normal: "border-solid border-4 border-red-300",
-  
-    fighting: "border-solid border-4 border-orange-900 ",
-  
-    flying: "border-solid border-4 border-red-300",
-  
-    poison: "border-solid border-4 border-violet-800",
-  
-    ground: "border-solid border-4 border-yellow-800",
-  
-    rock: "border-solid border-4 border-slate-200",
-  
-    bug: "border-solid border-4 border-green-500",
-  
-    ghost: "border-solid border-4 border-slate-800",
-  
-    steel: "border-solid border-4 border-slate-600",
-  
-    fire: "border-solid border-4 border-red-500 ",
-   
-    water: "border-solid border-4 border-blue-500",
-  
-    grass: "border-solid border-4 border-green-500",
-  
-    electric: "border-solid border-4 border-yellow-500",
-  
-    psychic: "border-solid border-4 border-yellow-900",
-  
-    ice: "border-solid border-4 border-slate-200",
-  
-    dragon: "border-solid border-4 border-orange-500",
-  
-    dark: "border-solid border-4 border-green-900",
-  
-    fairy: "border-solid border-4 border-red-300",
-  
-    unknown: "border-solid border-4 border-amber-950",
-  
-    shadow: " border-solid border-4 border-violet-600",
-  
-  };
-  
-   
-  
-  export { BorderType };
+export { BorderType };
