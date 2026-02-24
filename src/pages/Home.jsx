@@ -1,41 +1,83 @@
- 
- 
-import pokemon from'./../assets/pokemon.png';
+import pokemon from './../assets/pokemon.png';
 import { useQuestion } from '../Store/Reduxindex';
 import shallow from 'zustand/shallow';
 import { useNavigate } from 'react-router-dom';
 
- const Home = () => {
+const Home = () => {
   const navigate = useNavigate();
-  const {name}= useQuestion( (state)=>({
-   name:state.name,
-   
-  }),shallow);
-  const { newname }= useQuestion();
 
-  /*Sacamos las pripiedades del store global */
- /*Envio de evento */
-  const Handlesubmit =(e)=>{
+  const { name } = useQuestion(
+    (state) => ({
+      name: state.name,
+    }),
+    shallow
+  );
+
+  const { newname } = useQuestion();
+
+  const Handlesubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.nombre.value);
-    newname(e.target.nombre.value,true);
+    newname(e.target.nombre.value, true);
     navigate("/pokemons");
-  }
-   return (
-    <div className="home">
-    <article className='flex justify-center items-center flex-col'>
+  };
 
-            <img src={pokemon} alt="" />
-            <h1 className='text-red-500 text-[30px]'>  ¡Hola entrenador ! {name}</h1>
-            <dfn>Para poder comenzar, dame tu {name}</dfn>
-                {/*Debemos enviar datos  por evento a Handlesubmit */}
-                <form onSubmit={Handlesubmit} className='flex w-auto gap-2 flex-wrap flex-row'>
-                    <input type="text" id='nombre' required name="nombre"  className=' border shadow-xl p-5  text-slate-400  w-60' placeholder='Tu nombre'/>
-                    <button type='submit' className='bg-red-500 text-white text-[20px] p-5 rounded-lg w-40'>Start</button>
-                </form>
-                
-    </article>
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200">
+      
+      {/* Glass Card */}
+      <div className="backdrop-blur-xl bg-white/30 shadow-2xl rounded-3xl p-10 w-[90%] max-w-md border border-white/40">
+
+        <article className="flex flex-col items-center gap-6">
+
+          <img 
+            src={pokemon} 
+            alt="pokemon" 
+            className="w-40 drop-shadow-xl"
+          />
+
+          <h1 className="text-2xl font-bold text-gray-800 text-center">
+            ¡Hola entrenador! {name}
+          </h1>
+
+          <p className="text-gray-600 text-center">
+            Para comenzar, escribe tu nombre
+          </p>
+
+          <form 
+            onSubmit={Handlesubmit} 
+            className="flex flex-col gap-4 w-full"
+          >
+            {/* Neumorph Input */}
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              placeholder="Tu nombre"
+              className="px-6 py-4 rounded-xl bg-white/60 
+                         shadow-[inset_4px_4px_10px_rgba(0,0,0,0.1),
+                                 inset_-4px_-4px_10px_rgba(255,255,255,0.7)]
+                         focus:outline-none focus:ring-2 focus:ring-purple-400
+                         text-gray-700"
+            />
+
+            {/* Neumorph Button */}
+            <button
+              type="submit"
+              className="py-4 rounded-xl font-semibold text-white
+                         bg-gradient-to-r from-purple-500 to-pink-500
+                         shadow-lg
+                         hover:scale-105 active:scale-95
+                         transition-all duration-200"
+            >
+              Comenzar
+            </button>
+          </form>
+
+        </article>
+      </div>
     </div>
-   )
- }
- export default Home
+  );
+};
+
+export default Home;
